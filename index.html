@@ -124,16 +124,31 @@
             border-color: #e2caa4;
         }
 
-        .avatar-icon {
-            font-size: 4rem;
-            color: #c6965c;
-            background: #fbf5ea;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-        }
+     .avatar-icon {
+    color: #c6965c;
+    background: #fbf5ea;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-icon i {
+    font-size: 4.4rem;
+}
+
+.sun-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #c6965c;
+
+    -webkit-mask: url("./sun.svg") center / contain no-repeat;
+    mask: url("./sun.svg") center / contain no-repeat;
+}
 
         /* детали */
         .details-grid {
@@ -301,9 +316,9 @@
                         <p>Надёжный, добрый и целеустремлённый. Ценит семейные традиции и создаёт уют и покой рядом с собой.</p>
                     </div>
                     <div class="card">
-                        <div class="avatar-icon"><i class="fas fa-flower">
-                            <img src="./sun.svg" alt="sun" />
-                        </i></div>
+                        <div class="avatar-icon">
+        <span class="sun-icon"></span>
+    </div>
                         <h3>Аделина</h3>
                         <p>Источник света и тепла. Любит искусство, наполняет дом гармонией и заботой. Вместе мы строим счастливую семью.</p>
                     </div>
