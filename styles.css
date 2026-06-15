@@ -139,19 +139,22 @@ section:last-child {
 
 /* детали */
 .details-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+    align-items: stretch;
 }
 
 .detail-item {
     background: white;
     border-radius: 32px;
-    padding: 28px 22px;
+    padding: 36px 28px 40px;
     text-align: center;
-    flex: 1;
-    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.02);
     border: 1px solid #efe1cf;
 }
@@ -160,6 +163,41 @@ section:last-child {
     font-size: 2.5rem;
     color: #c6965c;
     margin-bottom: 18px;
+    flex-shrink: 0;
+}
+
+.detail-item h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #2d2a24;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #5c4a38;
+    margin: 0;
+}
+
+.detail-time {
+    display: inline-block;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #b47c44;
+    margin-bottom: 4px;
+}
+
+.detail-address {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.map-link-wrap {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .rsvp-box {
@@ -238,6 +276,18 @@ footer {
     background: #fdf6ef;
 }
 
+@media (max-width: 900px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 20px;
+    }
+
+    .detail-item {
+        padding: 32px 24px 36px;
+    }
+}
+
 @media (max-width: 780px) {
     .hero-content h1 { font-size: 2.5rem; }
     .names { font-size: 2.2rem; }
@@ -247,6 +297,15 @@ footer {
 
 @media (max-width: 580px) {
     section { padding: 60px 0; }
+
+    .detail-item {
+        padding: 28px 20px 32px;
+        border-radius: 28px;
+    }
+
+    .detail-time {
+        font-size: 1.25rem;
+    }
 }
 
 .highlight {
